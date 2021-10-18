@@ -1,0 +1,5 @@
+name: custom:demo.host-observability
+version: "0.0.1"
+minDynatraceVersion: "1.227"
+author:
+  name: Radu Stefan
