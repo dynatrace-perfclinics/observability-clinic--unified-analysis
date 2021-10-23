@@ -1,0 +1,93 @@
+name: custom:demo.host-observability
+version: "0.0.3"
+minDynatraceVersion: "1.227"
+author:
+  name: Radu Stefan
+
+wmi:
+  - group: Host
+    interval:
+      minutes: 1
+    dimensions:
+      - key: host
+        value: this:device.host
+    subgroups:
+      - subgroup: CPU
+        query: SELECT Name, PercentProcessorTime, PercentIdleTime, PercentUserTime FROM Win32_PerfFormattedData_PerfOS_Processor WHERE Name LIKE '_Total'
+        metrics:
+          - key: custom.demo.host-observability.host.cpu.time.processor
+            value: column:PercentProcessorTime
+          - key: custom.demo.host-observability.host.cpu.time.idle
+            value: column:PercentIdleTime
+          - key: custom.demo.host-observability.host.cpu.time.user
+            value: column:PercentUserTime
+        dimensions:
+          - key: host.cpu.id
+            value: column:Name
+  - group: Network
+    interval:
+      minutes: 1
+    dimensions:
+      - key: host
+        value: this:device.host
+    subgroups:
+      - subgroup: Adapters
+        query: SELECT Name, BytesTotalPersec, BytesReceivedPersec, BytesSentPersec FROM Win32_PerfFormattedData_Tcpip_NetworkAdapter
+        metrics:
+          - key: custom.demo.host-observability.network.bytes.persec
+            value: column:BytesTotalPersec
+          - key: custom.demo.host-observability.network.bytes.received.persec
+            value: column:BytesReceivedPersec
+          - key: custom.demo.host-observability.network.bytes.sent.persec
+            value: column:BytesSentPersec
+        dimensions:
+          - key: network.type
+            value: const:Adapter
+          - key: network.name
+            value: column:Name
+      - subgroup: Interfaces
+        query: SELECT Name, BytesTotalPersec, BytesReceivedPersec, BytesSentPersec FROM Win32_PerfFormattedData_Tcpip_NetworkInterface
+        metrics:
+          - key: custom.demo.host-observability.network.bytes.persec
+            value: column:BytesTotalPersec
+          - key: custom.demo.host-observability.network.bytes.received.persec
+            value: column:BytesReceivedPersec
+          - key: custom.demo.host-observability.network.bytes.sent.persec
+            value: column:BytesSentPersec
+        dimensions:
+          - key: network.type
+            value: const:Interface
+          - key: network.name
+            value: column:Name
+
+metrics:
+  - key: custom.demo.host-observability.host.cpu.time.processor
+    metadata:
+      displayName: Used processor time
+      description: Percent of used processor time
+      unit: Percent
+  - key: custom.demo.host-observability.host.cpu.time.idle
+    metadata:
+      displayName: Idle processor time
+      description: Percent of idle processor time
+      unit: Percent
+  - key: custom.demo.host-observability.host.cpu.time.user
+    metadata:
+      displayName: User processor time
+      description: Percent of user processor time
+      unit: Percent
+  - key: custom.demo.host-observability.network.bytes.persec
+    metadata:
+      displayName: Traffic bytes/s
+      description: Network traffic bytes per second
+      unit: BytePerSecond
+  - key: custom.demo.host-observability.network.bytes.received.persec
+    metadata:
+      displayName: Traffic received bytes/s
+      description: Network traffic received bytes per second
+      unit: BytePerSecond
+  - key: custom.demo.host-observability.network.bytes.sent.persec
+    metadata:
+      displayName: Traffic sent bytes/s
+      description: Network traffic sent bytes per second
+      unit: BytePerSecond

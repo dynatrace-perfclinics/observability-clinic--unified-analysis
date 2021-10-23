@@ -1,0 +1,54 @@
+name: custom:demo.host-observability
+version: # add new version here
+minDynatraceVersion: "1.227"
+author:
+  name: # add your name here
+
+wmi:
+  - group: # add group name here
+    interval:
+      minutes: # add metric collection frequency here
+    dimensions:
+      - key: host
+        value: # must identify the host running the extension
+    subgroups:
+      - subgroup: CPU
+        query: SELECT Name, PercentProcessorTime, PercentIdleTime, PercentUserTime FROM Win32_PerfFormattedData_PerfOS_Processor WHERE Name LIKE '_Total'
+        metrics:
+          - key: custom.demo.host-observability.cpu.time.processor
+            value: column:PercentProcessorTime
+          - key: custom.demo.host-observability. # continue the line with a metric key
+            value: # second metric
+          - key: custom.demo.host-observability. # continue the line with a metric key
+            value: # third metric
+        dimensions:
+          - key: host.cpu.id
+            value: column:Name
+  - group: # add group name here
+    interval:
+      minutes: # add metric collection frequency here
+    dimensions:
+      - key: host
+        value: # must identify the host running the extension
+    subgroups:
+      - subgroup: Adapters
+        query: SELECT Name, BytesTotalPersec, BytesReceivedPersec, BytesSentPersec FROM Win32_PerfFormattedData_Tcpip_NetworkAdapter
+        metrics:
+          #
+          #
+          # add contents here, for 3 metrics here based on the above query
+          #
+          #
+        dimensions:
+          - key: network.type
+            value: const:Adapter
+          - key: network.name
+            value: column:Name
+      - subgroup: # add subgroup name for Network Interface metrics
+      #
+      #
+      #
+      #  add contents here, for everything needed to collect Network Interface metrics via WMI Query
+      #  hint: check exercise description for the missing WMI query
+      #
+      #

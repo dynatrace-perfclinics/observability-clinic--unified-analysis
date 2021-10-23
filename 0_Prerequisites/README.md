@@ -22,11 +22,12 @@ To successfully develop Extensions 2.0 and be able to complete this tutorial you
   ```shell
   python dt.py extension gencerts --days-valid 10000
   ```
-This will leave you with 4 files:
-* `developer.pem` - your developer certificate
-* `developer.key` - your developer key
-* `ca.pem` - your root certificate
-* `ca.key` - your root key
+
+   Files are created as:
+   * `developer.pem` - your developer certificate
+   * `developer.key` - your developer key
+   * `ca.pem` - your root certificate
+   * `ca.key` - your root key
 
 ### Option 2: via OpenSSL
 1. Download OpenSSL and install it on your machine
@@ -39,21 +40,21 @@ This will leave you with 4 files:
    openssl req -days 10000 -new -x509 -key root.key -out root.pem
    openssl rsa -in root.key -pubout -out root.pub.key
    ```
-4. Create a certificate signing request
+3. Create a certificate signing request
    ```shell
    openssl genrsa -out developer.key 2048
    openssl rsa -in developer.key -pubout -out developer.pub.key
    openssl req -new -key developer.key -out developer.csr
    ```
-6. Issue your developer certificate and key
+4. Issue your developer certificate and key
    ```shell
    openssl x509 -req -days 10000 -in developer.csr -CA root.pem -Cakey root.key -Cacreateserial -out developer.pem
    ```
-Files are created as:
-* `developer.pem` - your developer certificate
-* `developer.key` - your developer key
-* `root.pem` - your root certificate
-* `root.key` - your root key
+   Files are created as:
+   * `developer.pem` - your developer certificate
+   * `developer.key` - your developer key
+   * `root.pem` - your root certificate
+   * `root.key` - your root key
 
 ## Distribute the root certificate to Dynatrace components
 
@@ -66,3 +67,6 @@ Files are created as:
 1. Go to `C:\ProgramData\dynatrace\oneagent\agent\config`
 2. Go to `certificates` folder or create it it doesn't exist
 3. Upload your `ca.pem` or `root.pem` generated earlier
+
+
+###[Click here to start the tutorial ▶](/1_Basic-Extension)

@@ -1,0 +1,5 @@
+name: custom:demo.host-observability
+version: # add version
+minDynatraceVersion: "1.227"
+author:
+  name: # add your name

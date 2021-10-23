@@ -25,18 +25,19 @@ python dt.py extension build --extension-directory <path> --target-directory <pa
 
 Go to `Extensions` from the main menu, click `Upload custom Extension 2.0` and upload your file.
 
-## Objectives
+## Tasks
 1. Create a `extension` folder on your computer
 2. Create a `extension.yaml` inside that folder
 3. Add the minimum information required for Extension 2.0 in the `extension.yaml` file
-   
-   You can use this template
-   ```yaml
-   name: custom:demo.host-observability
-   version: # insert version here
-   minDynatraceVersion: 1.227
-   author:
-     name: # insert your name here
-   ```
-5. Sign your extension
-6. Upload your extension archive to Dynatrace
+4. Sign your extension
+5. Upload your extension archive to Dynatrace
+
+## Results
+You have completed the exercise when your extension shows up in Dynatrace as Active.
+
+![result](../1_Basic-Extension/img/result.png)
+
+---
+## [Next exercise ▶](../2_WMI-DataSource)
+
+#### [◀ Back to intro](../)
