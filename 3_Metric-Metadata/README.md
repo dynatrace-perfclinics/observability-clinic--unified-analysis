@@ -28,7 +28,7 @@ The `metrics` section of the extension is there to define additional metadata fo
 
 You have completed this exercise when you can see the metadata reflected in the "Metrics" menu:
 
-![]()
+![result](img/results.png)
 
 ---
 ## [Next exercise ▶](../4_Generic-Topology)

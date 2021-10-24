@@ -1,9 +1,3 @@
-name: custom:demo.host-observability
-version: "0.0.2"
-minDynatraceVersion: "1.227"
-author:
-  name: Radu Stefan
-
 wmi:
   - group: Host
     interval:
