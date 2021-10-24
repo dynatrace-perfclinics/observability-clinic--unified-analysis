@@ -1,0 +1,5 @@
+dashboards:
+  - path: # path to your dashboard JSON
+
+alerts:
+  - path: # path to your alert JSON

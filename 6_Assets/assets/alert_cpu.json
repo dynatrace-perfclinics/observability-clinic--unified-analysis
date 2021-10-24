@@ -1,0 +1,35 @@
+{
+    "metadata": {
+      "configurationVersions": [
+        6
+      ],
+      "clusterVersion": "1.229.118.20211022-160029"
+    },
+    "id": "f7213121-7fdd-4ec5-b7d2-5e550907bf0c",
+    "metricId": "com.dynatrace.extension.f5.bigip.sys.global.host.cpu.user1m",
+    "name": "F5 CPU Saturation",
+    "description": "The {metricname} value of {severity} was {alert_condition} your custom threshold of {threshold}.\n{dims:dt.entity.f5:instance.name} - CPU is Saturated",
+    "aggregationType": "AVG",
+    "severity": "RESOURCE_CONTENTION",
+    "enabled": true,
+    "disabledReason": "NONE",
+    "warningReason": "NONE",
+    "monitoringStrategy": {
+      "type": "STATIC_THRESHOLD",
+      "samples": 5,
+      "violatingSamples": 3,
+      "dealertingSamples": 5,
+      "alertCondition": "ABOVE",
+      "alertingOnMissingData": false,
+      "threshold": 85,
+      "unit": "PERCENT"
+    },
+    "primaryDimensionKey": "dt.entity.f5:instance",
+    "alertCondition": "ABOVE",
+    "samples": 5,
+    "violatingSamples": 3,
+    "dealertingSamples": 5,
+    "threshold": 85,
+    "unit": "PERCENT",
+    "eventType": "RESOURCE_CONTENTION"
+  }

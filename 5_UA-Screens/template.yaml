@@ -26,31 +26,31 @@ screens:
               themeColor: BLUE
               seriesType: AREA
             metrics:
-              - metricSelector: "custom.demo.host-observability.host.cpu.time.idle:SplitBy()"
-              - metricSelector: "custom.demo.host-observability.host.cpu.time.user:SplitBy()"
-              - metricSelector: "custom.demo.host-observability.host.cpu.time.processor:SplitBy()"
+              #
+              # add metric selectors for the 3 cpu metrics
+              #
           - displayName: "CPU User"
             visualization:
               themeColor: BLUE
               seriesType: LINE
             metrics:
-              - metricSelector: "custom.demo.host-observability.host.cpu.time.user:SplitBy()"
+              - metricSelector: # add the metric selector for CPU User
           - displayName: "CPU Idle"
             visualization:
               themeColor: BLUE
               seriesType: LINE
             metrics:
-              - metricSelector: "custom.demo.host-observability.host.cpu.time.idle:SplitBy()"
+              - metricSelector: # add the metric selector for CPU Idle
           - displayName: "CPU Used"
             visualization:
               themeColor: BLUE
               seriesType: LINE
             metrics:
-              - metricSelector: "custom.demo.host-observability.host.cpu.time.processor:SplitBy()"
+              - metricSelector: # add the metric selector for CPU Used
     entitiesListCards:
       - key: "wmi_host-list-network_interfaces"
         displayName: "Network Interfaces"
-        entitySelectorTemplate: "type(wmi:generic_network_device),fromRelationships.runsOn($(entityConditions)),wmi_network_type(Interface)"
+        entitySelectorTemplate: # add the entity selector template for listing out network interfaces
         pageSize: 5
         displayCharts: false
         displayIcons: true
@@ -85,15 +85,15 @@ screens:
       properties:
         - type: ATTRIBUTE
           attribute:
-            key: wmi_network_name
+            key: # add the key for the Network Name attribute
             displayName: Name
         - type: ATTRIBUTE
           attribute:
-            key: wmi_network_type
+            key: # add the key for the Network Type attribute
             displayName: Type
         - type: RELATION
           relation:
-            entitySelectorTemplate: type(wmi:generic_host),toRelationships.runsOn($(entityConditions))
+            entitySelectorTemplate: # add the entity selector template for this entity's host
             displayName: Host
     detailsSettings:
       staticContent:

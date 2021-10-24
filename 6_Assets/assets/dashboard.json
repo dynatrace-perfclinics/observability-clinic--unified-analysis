@@ -1,0 +1,299 @@
+{
+    "metadata": {
+      "configurationVersions": [
+        5
+      ],
+      "clusterVersion": "1.229.118.20211022-160029"
+    },
+    "id": "06836d34-7abb-4130-9655-ea4f19ddf78e",
+    "dashboardMetadata": {
+      "name": "Generic Host Monitoring",
+      "shared": false,
+      "owner": "radu.stefan@dynatrace.com"
+    },
+    "tiles": [
+      {
+        "name": "CPU",
+        "tileType": "DATA_EXPLORER",
+        "configured": true,
+        "bounds": {
+          "top": 38,
+          "left": 494,
+          "width": 836,
+          "height": 266
+        },
+        "tileFilter": {},
+        "customName": "Explorer results",
+        "queries": [
+          {
+            "id": "A",
+            "metric": "custom.demo.host-observability.host.cpu.time.processor",
+            "spaceAggregation": "AVG",
+            "timeAggregation": "DEFAULT",
+            "splitBy": [
+              "dt.entity.wmi:generic_host"
+            ],
+            "metricSelector": "custom.demo.host-observability.host.cpu.time.processor:splitBy(host):avg:auto:sort(value(avg,descending)):limit(20)",
+            "enabled": true
+          },
+          {
+            "id": "B",
+            "metric": "custom.demo.host-observability.host.cpu.time.idle",
+            "spaceAggregation": "AVG",
+            "timeAggregation": "DEFAULT",
+            "splitBy": [
+              "dt.entity.wmi:generic_host"
+            ],
+            "metricSelector": "custom.demo.host-observability.host.cpu.time.idle:splitBy(host):avg:auto:sort(value(avg,descending)):limit(20)",
+            "enabled": true
+          },
+          {
+            "id": "C",
+            "metric": "custom.demo.host-observability.host.cpu.time.user",
+            "spaceAggregation": "AVG",
+            "timeAggregation": "DEFAULT",
+            "splitBy": [
+              "dt.entity.wmi:generic_host"
+            ],
+            "metricSelector": "custom.demo.host-observability.host.cpu.time.user:splitBy(host):avg:auto:sort(value(avg,descending)):limit(20)",
+            "enabled": true
+          }
+        ],
+        "visualConfig": {
+          "type": "GRAPH_CHART",
+          "global": {
+            "theme": "DEFAULT",
+            "seriesType": "LINE"
+          },
+          "rules": [
+            {
+              "matcher": "A:",
+              "properties": {
+                "seriesType": "LINE"
+              }
+            },
+            {
+              "matcher": "B:",
+              "properties": {
+                "seriesType": "LINE"
+              }
+            }
+          ],
+          "axes": {
+            "xAxis": {
+              "visible": true
+            },
+            "yAxes": []
+          },
+          "heatmapSettings": {},
+          "thresholds": []
+        }
+      },
+      {
+        "name": "CPU",
+        "tileType": "HEADER",
+        "configured": true,
+        "bounds": {
+          "top": 0,
+          "left": 0,
+          "width": 1330,
+          "height": 38
+        },
+        "tileFilter": {}
+      },
+      {
+        "name": "Network",
+        "tileType": "HEADER",
+        "configured": true,
+        "bounds": {
+          "top": 342,
+          "left": 0,
+          "width": 1330,
+          "height": 38
+        },
+        "tileFilter": {}
+      },
+      {
+        "name": "Traffic",
+        "tileType": "DATA_EXPLORER",
+        "configured": true,
+        "bounds": {
+          "top": 380,
+          "left": 494,
+          "width": 836,
+          "height": 304
+        },
+        "tileFilter": {},
+        "customName": "Explorer results",
+        "queries": [
+          {
+            "id": "E",
+            "metric": "custom.demo.host-observability.network.bytes.persec",
+            "spaceAggregation": "AVG",
+            "timeAggregation": "DEFAULT",
+            "splitBy": [
+              "dt.entity.wmi:generic_host",
+              "network.name"
+            ],
+            "metricSelector": "custom.demo.host-observability.network.bytes.persec:splitBy(host,network.name):avg:auto:sort(value(avg,descending)):limit(20)",
+            "enabled": true
+          },
+          {
+            "id": "F",
+            "metric": "custom.demo.host-observability.network.bytes.received.persec",
+            "spaceAggregation": "AVG",
+            "timeAggregation": "DEFAULT",
+            "splitBy": [
+              "dt.entity.wmi:generic_host",
+              "network.name"
+            ],
+            "metricSelector": "custom.demo.host-observability.network.bytes.received.persec:splitBy(host,network.name):avg:auto:sort(value(avg,descending)):limit(20)",
+            "enabled": true
+          },
+          {
+            "id": "G",
+            "metric": "custom.demo.host-observability.network.bytes.sent.persec",
+            "spaceAggregation": "AVG",
+            "timeAggregation": "DEFAULT",
+            "splitBy": [
+              "dt.entity.wmi:generic_host",
+              "network.name"
+            ],
+            "metricSelector": "custom.demo.host-observability.network.bytes.sent.persec:splitBy(host,network.name):avg:auto:sort(value(avg,descending)):limit(20)",
+            "enabled": true
+          }
+        ],
+        "visualConfig": {
+          "type": "GRAPH_CHART",
+          "global": {
+            "theme": "DEFAULT",
+            "seriesType": "LINE"
+          },
+          "rules": [
+            {
+              "matcher": "E:",
+              "properties": {
+                "seriesType": "LINE"
+              }
+            },
+            {
+              "matcher": "F:",
+              "properties": {
+                "seriesType": "LINE"
+              }
+            }
+          ],
+          "axes": {
+            "xAxis": {
+              "visible": true
+            },
+            "yAxes": []
+          },
+          "heatmapSettings": {},
+          "thresholds": []
+        }
+      },
+      {
+        "name": "Instances",
+        "tileType": "DATA_EXPLORER",
+        "configured": true,
+        "bounds": {
+          "top": 38,
+          "left": 0,
+          "width": 494,
+          "height": 266
+        },
+        "tileFilter": {},
+        "customName": "Instances",
+        "queries": [
+          {
+            "id": "A",
+            "spaceAggregation": "AVG",
+            "timeAggregation": "DEFAULT",
+            "metricSelector": "custom.demo.host-observability.host.cpu.time.processor:splitBy(\"dt.entity.wmi:generic_host\"):avg:auto:sort(value(avg,descending)):limit(10)",
+            "enabled": true
+          },
+          {
+            "id": "B",
+            "spaceAggregation": "AVG",
+            "timeAggregation": "DEFAULT",
+            "metricSelector": "custom.demo.host-observability.host.memory.bytes.available:splitBy(\"dt.entity.wmi:generic_host\"):avg:auto:sort(value(avg,descending)):limit(10)",
+            "enabled": true
+          }
+        ],
+        "visualConfig": {
+          "type": "TABLE",
+          "global": {
+            "theme": "DEFAULT",
+            "seriesType": "LINE"
+          },
+          "rules": [],
+          "axes": {
+            "xAxis": {
+              "visible": true
+            },
+            "yAxes": []
+          },
+          "heatmapSettings": {},
+          "thresholds": []
+        }
+      },
+      {
+        "name": "Network Devices",
+        "tileType": "DATA_EXPLORER",
+        "configured": true,
+        "bounds": {
+          "top": 380,
+          "left": 0,
+          "width": 494,
+          "height": 304
+        },
+        "tileFilter": {},
+        "customName": "Instances",
+        "queries": [
+          {
+            "id": "A",
+            "timeAggregation": "DEFAULT",
+            "metricSelector": "custom.demo.host-observability.network.bytes.persec:avg:SplitBy(\"dt.entity.wmi:generic_network_device\"):sort(value(avg,descending)):limit(10)",
+            "enabled": true
+          }
+        ],
+        "visualConfig": {
+          "type": "TABLE",
+          "global": {
+            "theme": "DEFAULT",
+            "seriesType": "LINE",
+            "hideLegend": false
+          },
+          "rules": [],
+          "axes": {
+            "xAxis": {
+              "displayName": "",
+              "visible": true
+            },
+            "yAxes": []
+          },
+          "heatmapSettings": {},
+          "thresholds": [
+            {
+              "axisTarget": "LEFT",
+              "columnId": "Used processor time",
+              "rules": [
+                {
+                  "color": "#7dc540"
+                },
+                {
+                  "color": "#f5d30f"
+                },
+                {
+                  "color": "#dc172a"
+                }
+              ],
+              "queryId": "",
+              "visible": true
+            }
+          ]
+        }
+      }
+    ]
+  }

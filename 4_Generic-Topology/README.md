@@ -23,11 +23,12 @@ it should belong to both entity types part of the relationship
   * ../ui/entity/list/wmi:generic_network_device
 
 ## Tasks
-1. Define two entity types for a Generic Host and a Generic Network Device
-2. Ensure that network devices are aware of the type (Adpater or Interface)
-3. Create a relationship between the two where a Generic Network Device runs on a Generic Host
-4. Package and upload a new version of your extension
-5. Validate the new entities are created
+1. Add the `topology` section to your `extension.yaml`
+2. Define two entity types for a Generic Host and a Generic Network Device
+3. Ensure that network devices are aware of the type (Adpater or Interface)
+4. Create a relationship between the two where a Generic Network Device runs on a Generic Host
+5. Package and upload a new version of your extension
+6. Validate the new entities are created
 
 ## Results
 You have completed this exercise when you see new entities created for your generic host and generic network device entity types:
