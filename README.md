@@ -16,4 +16,4 @@ The format of the exercises is simple:
 * Each exercise has tasks which you must complete. You can either write these from scratch or use the provided `template.yaml` as a starting point
 * `solution.yaml` offers the complete solution to the exercise
 
-###[Click here to start the tutorial ▶](/1_Basic-Extension)
+## [Click here to start the tutorial ▶](/1_Basic-Extension)

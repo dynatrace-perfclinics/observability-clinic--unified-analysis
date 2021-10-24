@@ -1,9 +1,3 @@
-name: custom:demo.host-observability
-version: # add new version here
-minDynatraceVersion: "1.227"
-author:
-  name: # add your name here
-
 wmi:
   - group: # add group name here
     interval:
