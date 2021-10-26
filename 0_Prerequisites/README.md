@@ -3,7 +3,7 @@
 To successfully develop Extensions 2.0 and be able to complete this tutorial you will need to sort out some pre-requisites:
 * Admin access to a Dynatrace SaaS or Managed environment (min. version 1.227)
 * A Windows host (virtual machine)
-* OneAgent deployed on the said Windows host
+* OneAgent (min. version 1.227) deployed on the said Windows host
 * A developer certificate and key (to be used for signing your extensions)
 * Either [OpenSSL](https://www.openssl.org/source/) or [dt-cli](https://github.com/dynatrace-oss/dt-cli) on your machine
 * Your root certificate uploaded to Dynatrace and on the OneAgent host
@@ -65,8 +65,9 @@ To successfully develop Extensions 2.0 and be able to complete this tutorial you
 
 ### 2. Upload to OneAgent host that runs the extension
 1. Go to `C:\ProgramData\dynatrace\oneagent\agent\config`
-2. Go to `certificates` folder or create it it doesn't exist
+2. Go to `certificates` folder or create it if it doesn't exist
 3. Upload your `ca.pem` or `root.pem` generated earlier
 
 
-###[Click here to start the tutorial ▶](/1_Basic-Extension)
+## [Click here to start the tutorial ▶](/1_Basic-Extension)
+#### [◀ Back to intro](../README.md)
