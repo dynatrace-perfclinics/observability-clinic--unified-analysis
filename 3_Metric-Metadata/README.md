@@ -2,7 +2,7 @@
 ---
 
 ## Description
-With just the data source present in the extension the metric collection is rather raw - all metrics are referenced by key and everying appears without any measurement unit which can make it confusing.
+With just the data source present in the extension the metric collection is rather raw - all metrics are referenced by key and everything appears without any measurement unit which can make it confusing.
 
 The `metrics` section of the extension is there to define additional metadata for metrics. We can define the following:
 * `displayName` - human readable name of metric
