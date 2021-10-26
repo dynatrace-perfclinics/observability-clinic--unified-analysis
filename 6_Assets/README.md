@@ -5,7 +5,7 @@
 
 With extensions 2.0 you can now package the expertise required to monitor a new technology in the form of dashboards and custom alerts. These are made available within the Dynatrace tenant as soon as the extension is deployed.
 
-Dashboards and alerts must be packaged as part of your `extension.zip` archive and are referenced in YAML within the `dashboards` and `alerts` sections. Items in these lists map to paths relative to the extension archive.
+Dashboards and alerts must be packaged as JSON files (content is the same as an API export) as part of your `extension.zip` archive and are referenced in YAML within the `dashboards` and `alerts` sections. Items in these lists map to paths relative to the extension archive.
 
 Example:
 ```yaml
