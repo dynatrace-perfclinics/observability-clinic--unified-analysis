@@ -5,13 +5,13 @@
 
 For your extension to be able to collect any metrics and have them ingested into Dynatrace, you must define a data source. In this tutorial we're using the WMI data source. This must be a section called `wmi` in your extension.
 
-The purpose of the `wmi` section is define the WMI queries that retrieve your metrics, how often they should run, and how to map their results into metrics and dimensions that Dynatrace can ingest.
+The purpose of the `wmi` section is define the WMI queries that retrieve your metrics, how often they should run, and how to map their results into metrics and dimensions that Dynatrace can ingest. Groups and subgroups are used to organise data and define shared properties like dimensions and running frequency.
 
 The extension we're builing uses 3 WMI Queries:
 ```sql
 SELECT Name, PercentProcessorTime, PercentIdleTime, PercentUserTime FROM Win32_PerfFormattedData_PerfOS_Processor WHERE Name LIKE '_Total'
 ```
-* extracts CPU Used, User, and Idle for each of the host's processors
+* extracts CPU Usage, User CPU, and Idle CPU for each of the host's processors (by split by cpu id).
 
 ```sql
 SELECT Name, BytesTotalPersec, BytesReceivedPersec, BytesSentPersec FROM Win32_PerfFormattedData_Tcpip_NetworkAdapter
@@ -29,7 +29,7 @@ SELECT Name, BytesTotalPersec, BytesReceivedPersec, BytesSentPersec FROM Win32_P
 
 **Other tips**
 
-* You can identify the Host running the extension through the configuration property `this:device.host`
+* You can identify the Host running the extension through the `this:device.host` passed as a dimension value
 * You can add dimensions that are fixed strings using the prefix `const:`
 
 
