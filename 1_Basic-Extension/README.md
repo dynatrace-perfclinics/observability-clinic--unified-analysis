@@ -1,7 +1,7 @@
 # Exercise 1 - A basic Extension 2.0
 ---
 ## Description
-Extensions 2.0 are primarly based on a YAML file. The YAML file has minimum requirements to be valid:
+Extensions 2.0 are mainly based on a YAML file. The YAML file has minimum requirements to be valid:
 * name - which must begin with `custom:` for custom extensions
 * version
 * author
