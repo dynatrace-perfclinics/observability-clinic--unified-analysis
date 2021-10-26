@@ -9,6 +9,7 @@ drilldowns.
 
 The details page is organised into `staticContent` and a `layout` for dynamic content that comprises of `cards` (charts 
 and lists).
+
 `staticContent`
 * `showProblems` - show a panel for any Problems about this entity
 * `showProperties` - show the "Properties and tags" section
@@ -69,7 +70,7 @@ The `propertiesCard` of an entity can also be modified to include additional pro
 2. Customize the details page settings for both the Generic Host and the Generic Network Device entity types.
 3. Use charts cards to display all the metrics of each entity
 4. Add entity list cards so that a Generic Host can list out all Network Adapters and Interfaces running on it
-5. Add a relation based property so that a Gneric Network Device displays what Generic Host it runs on
+5. Add a relation based property so that a Generic Network Device displays what Generic Host it runs on
 6. Package and upload a new version of your extension
 7. Validate your screens are showing up as expected
 
