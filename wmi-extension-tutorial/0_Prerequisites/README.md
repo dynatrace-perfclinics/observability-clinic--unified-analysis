@@ -67,5 +67,5 @@ To successfully develop Extensions 2.0 and be able to complete this tutorial you
 3. Upload your `ca.pem` or `root.pem` generated earlier
 
 
-## [Click here to start the tutorial ▶](/1_Basic-Extension)
+## [Click here to start the tutorial ▶](../1_Basic-Extension/README.md)
 #### [◀ Back to intro](../README.md)

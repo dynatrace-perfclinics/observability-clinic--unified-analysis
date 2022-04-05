@@ -31,6 +31,6 @@ You have completed this exercise when you can see the metadata reflected in the 
 ![result](img/results.png)
 
 ---
-## [Next exercise ▶](../4_Generic-Topology)
+## [Next exercise ▶](../4_Generic-Topology/README.md)
 
-#### [◀ Previous exercise](../2_WMI-DataSource)
+#### [◀ Previous exercise](../2_WMI-DataSource/README.md)

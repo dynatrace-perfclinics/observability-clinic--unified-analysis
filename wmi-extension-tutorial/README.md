@@ -32,4 +32,4 @@ Each exercise leaves you with a working Extension 2.0. By the end, you will have
 
 If you get stuck, the `solution.yaml` offers the complete solution to the exercise.
 
-## [Click here to start the tutorial ▶](/1_Basic-Extension)
+## [Click here to start the tutorial ▶](../1_Basic-Extension/README.md)

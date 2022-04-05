@@ -48,6 +48,6 @@ You have completed the exercise when all your 6 metrics show up in the "Metrics"
 ![result](img/result.png)
 
 ---
-## [Next exercise ▶](../3_Metric-Metadata)
+## [Next exercise ▶](../3_Metric-Metadata/README.md)
 
-#### [◀ Previous exercise](../1_Basic-Extension)
+#### [◀ Previous exercise](../1_Basic-Extension/README.md)

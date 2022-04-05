@@ -38,6 +38,6 @@ You have completed the exercise when your extension shows up in Dynatrace as Act
 ![result](../1_Basic-Extension/img/result.png)
 
 ---
-## [Next exercise ▶](../2_WMI-DataSource)
+## [Next exercise ▶](../2_WMI-DataSource/README.md)
 
 #### [◀ Back to intro](../README.md)
