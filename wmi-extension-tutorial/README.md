@@ -12,7 +12,7 @@ This tutorial will guide you step by step through building a complete 2.0 Extens
 * Designing nice analysis screens
 * Shipping assets with your extension
 
-**Please make sure you have read and completed the [prerequsites](/0_Prerequisites) before starting.**
+**Please make sure you have read and completed the [prerequsites](/wmi-extension-tutorial/0_Prerequisites) before starting.**
 
 ## Format and instructions
 
@@ -32,4 +32,4 @@ Each exercise leaves you with a working Extension 2.0. By the end, you will have
 
 If you get stuck, the `solution.yaml` offers the complete solution to the exercise.
 
-## [Click here to start the tutorial ▶](/1_Basic-Extension)
+## [Click here to start the tutorial ▶](../wmi-extension-tutorial/1_Basic-Extension)
