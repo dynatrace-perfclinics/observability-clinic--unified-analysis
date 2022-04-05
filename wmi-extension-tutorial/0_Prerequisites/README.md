@@ -10,17 +10,15 @@ To successfully develop Extensions 2.0 and be able to complete this tutorial you
 
 ## Generate a developer certificate and key
 
-### Option 1: via dt-cli
-1. Install [Python 3.9+](https://www.python.org/downloads/) on your machine
+### Option 1: via dt-cli (*recommended)
+1. Install [Python 3.8+](https://www.python.org/downloads/) on your machine
 2. Install `dt-cli` python module
   ```shell
   pip install dt-cli
   ```
-3. Download [dt.py script](https://raw.githubusercontent.com/dynatrace-oss/dt-cli/main/dtcli/scripts/dt.py)
-
-4. Generate all the required files
+3. Generate all the required files
   ```shell
-  python dt.py extension gencerts --days-valid 10000
+  python dt.py extension gencerts --days-valid 1000
   ```
 
    Files are created as:
