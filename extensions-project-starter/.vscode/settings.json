@@ -1,0 +1,5 @@
+{
+    "yaml.schemas": {
+        "schemas/extension.schema.json": "extension.yaml"
+    }
+}

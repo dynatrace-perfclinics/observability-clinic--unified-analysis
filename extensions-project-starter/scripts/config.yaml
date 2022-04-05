@@ -1,0 +1,25 @@
+# MANDATORY: Dynatrace connection details
+###############################################################
+tenant_url: https://abc12345.live.dynatrace.com
+api_token: .Env.TOKEN # .Env.<name> will look for an environment variable called <name>
+
+# Parameters for schema downloading
+# -------------------------------------------------------------
+schema_version: 1.235
+# schema_folder: ../schemas
+
+# OPTIONAL: Parameters for certificate creation
+###############################################################
+# Files to generate
+# -------------------------------------------------------------
+# ca_cert_path: ../certs/ca.pem
+# ca_key_path: ../certs/ca.key
+# dev_cert_path: ../certs/dev.pem
+# dev_key_path: ../certs/dev.key
+
+# Certificate details
+#--------------------------------------------------------------
+# common_name: SomeDeveloper
+# org_name: SomeOrganization
+# org_unit: SomeDepartment
+# days_valid: 1095
