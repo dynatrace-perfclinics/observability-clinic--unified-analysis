@@ -80,6 +80,6 @@ You have completed this exercise when your customized unified analysis screens a
 ![result](img/result.png)
 
 ---
-## [Next exercise ▶](../6_Assets/README.md)
+## [Next exercise ▶](../6_Assets)
 
-#### [◀ Previous exercise](../4_Generic-Topology/README.md)
+#### [◀ Previous exercise](../4_Generic-Topology)

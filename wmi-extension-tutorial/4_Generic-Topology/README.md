@@ -37,6 +37,6 @@ You have completed this exercise when you see new entities created for your gene
 ![network_devices](img/result2.png)
 
 ---
-## [Next exercise ▶](../5_UA-Screens/README.md)
+## [Next exercise ▶](../5_UA-Screens)
 
-#### [◀ Previous exercise](../3_Metric-Metadata/README.md)
+#### [◀ Previous exercise](../3_Metric-Metadata)

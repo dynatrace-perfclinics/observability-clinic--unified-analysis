@@ -30,4 +30,4 @@ You have completed this exercise when you can verify a dashboard called "Generic
 ---
 ## Congrats! You've finished all exercises!
 
-#### [◀ Back to intro](../)
+#### [◀ Back to intro](../README.md)
