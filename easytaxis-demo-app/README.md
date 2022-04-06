@@ -9,7 +9,8 @@ Successfully running this simulation requires access to a Dynatrace SaaS or Mana
 
 ## Running the app
 
-Choose the appropriate executable for your platform and run it.
+Choose the [appropriate executable](./release) for your platform and run it.
+
 You'll be greeted by an introductory banner and can type `help` to find out more.
 
 ```
