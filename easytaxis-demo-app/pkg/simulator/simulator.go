@@ -59,9 +59,8 @@ func StartSimulation(dtc rest.DTClient, numFleets int, numTaxis int, verbose boo
 
 func sendFleetMetrics(dtc rest.DTClient, f fleet.Fleet, verbose bool) {
 	log.SetHandler(rest.New(dtc))
-	log.WithFields(log.Fields{"fleet.id": f.GetId()}).Info("sending fleet metrics")
-	entityID, _ := dtc.GetEntityId(fmt.Sprintf("type(easytaxis:smart_fleet),FleetID(%d)", f.GetId()))
 	for {
+		entityID, _ := dtc.GetEntityId(fmt.Sprintf("type(easytaxis:smart_fleet),FleetID(%d)", f.GetId()))
 		log.WithFields(log.Fields{
 			"fleet.id":      f.GetId(),
 			"custom.device": entityID,

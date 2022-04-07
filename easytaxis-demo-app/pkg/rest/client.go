@@ -61,6 +61,7 @@ func doRequest(req *http.Request) []byte {
 		fmt.Println(req.RequestURI)
 		fmt.Println(req.URL.Query())
 	}
+	resp.Body.Close()
 
 	return body
 }
