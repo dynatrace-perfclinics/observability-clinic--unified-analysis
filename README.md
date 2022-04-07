@@ -16,7 +16,7 @@ Everything you've seen or heard being mentioned in the Unified Analysis episode 
 
 * ### [Extension Project Starter](extensions-project-starter)
 
-  The VS Code project structure and convenience scripts used in the hands-on portion of the exercise.
+  The VS Code project structure and convenience scripts used in the hands-on portion of the episode.
 
 * ### [WMI Extension 2.0 Tutorial](wmi-extension-tutorial)
 
