@@ -6,6 +6,7 @@
 
 Everything you've seen or heard being mentioned in the Unified Analysis episode of the Observability Clinic Webinar.
 
+In case you missed it, watch the episode **[here](https://www.youtube.com/watch?v=tIIVaC9iWPM)**
 
 
 ## Contents
