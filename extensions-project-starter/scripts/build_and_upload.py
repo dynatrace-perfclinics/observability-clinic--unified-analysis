@@ -14,7 +14,7 @@ def get_current_name_and_version():
 
 def build():
     print(f"Building extension {name} version {version}...")
-    building.build_extension(
+    building.build_and_sign(
         extension_dir_path="../extension",
         target_dir_path="../build",
         extension_zip_path="../extension.zip",
